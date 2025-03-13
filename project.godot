@@ -1,0 +1,12 @@
+config_version=5
+
+[application]
+
+config/name="武侠大富翁"
+run/main_scene="res://scenes/main.tscn"
+config/features=[&"4.4"]
+config/icon="res://icon.svg"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,3321 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8j8u4vq3urxn"]
+
+[ext_resource type="Script" path="res://scenes/village/village.gd" id="1_ixn4r"]
+[ext_resource type="Script" path="res://scenes/village/player.gd" id="2_yvmkl"]
+[ext_resource type="Script" path="res://scenes/village/dice.gd" id="3_lfcxm"]
+[ext_resource type="Texture2D" path="res://assets/background.png" id="4_bnxvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjr8v"]
+size = Vector2(40, 40)
+
+[node name="Village" type="Node2D"]
+script = ExtResource("1_ixn4r")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1600.0
+offset_bottom = 900.0
+texture = ExtResource("4_bnxvs")
+
+[node name="PathPoints" type="Node2D" parent="."]
+
+[node name="Point1" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point13" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point13"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point14" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point14"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point15" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point15"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point16" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point16"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point17" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point17"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point18" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point18"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point19" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point19"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point20" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point20"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point21" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point21"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point22" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point22"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point23" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point23"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point24" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point24"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point25" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point25"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point26" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point26"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point27" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point27"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point28" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point28"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point29" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point29"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point30" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point30"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point31" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point31"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point32" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point32"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point33" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point33"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point34" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point34"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point35" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point35"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point36" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point36"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point37" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point37"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point38" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point38"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point39" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point39"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point40" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point40"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point41" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point41"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "41"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point42" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point42"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point43" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point43"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point44" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point44"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point45" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point45"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point46" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point46"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point47" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point47"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point48" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point48"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "48"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point49" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point49"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "49"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("2_yvmkl")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.921569, 0.337255, 0.294118, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_yjr8v")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiceButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+offset_bottom = -50.0
+text = "掷骰子"
+
+[node name="DiceResult" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -100.0
+text = "点数: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node2D" parent="."]
+script = ExtResource("3_lfcxm")
+
+[connection signal="pressed" from="UI/DiceButton" to="Dice" method="_on_dice_button_pressed"]
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point13" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point13"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point14" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point14"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point15" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point15"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point16" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point16"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point17" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point17"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point18" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point18"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point19" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point19"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point20" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point20"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point21" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point21"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point22" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point22"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point23" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point23"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point24" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point24"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point25" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point25"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point26" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point26"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point27" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point27"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point28" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point28"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point29" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point29"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point30" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point30"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point31" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point31"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point32" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point32"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point33" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point33"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point34" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point34"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point35" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point35"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point36" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point36"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point37" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point37"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point38" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point38"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point39" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point39"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point40" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point40"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point41" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point41"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "41"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point42" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point42"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point43" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point43"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point44" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point44"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point45" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point45"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point46" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point46"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point47" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point47"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point48" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point48"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "48"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point49" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point49"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "49"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("2_yvmkl")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.921569, 0.337255, 0.294118, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_yjr8v")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiceButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+offset_bottom = -50.0
+text = "掷骰子"
+
+[node name="DiceResult" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -100.0
+text = "点数: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node2D" parent="."]
+script = ExtResource("3_lfcxm")
+
+[connection signal="pressed" from="UI/DiceButton" to="Dice" method="_on_dice_button_pressed"]
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point13" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point13"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point14" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point14"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point15" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point15"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point16" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point16"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point17" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point17"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point18" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point18"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point19" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point19"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point20" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point20"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point21" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point21"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point22" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point22"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point23" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point23"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point24" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point24"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point25" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point25"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point26" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point26"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point27" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point27"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point28" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point28"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point29" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point29"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point30" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point30"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point31" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point31"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point32" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point32"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point33" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point33"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point34" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point34"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point35" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point35"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point36" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point36"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point37" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point37"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point38" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point38"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point39" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point39"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point40" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point40"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point41" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point41"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "41"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point42" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point42"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point43" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point43"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point44" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point44"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point45" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point45"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point46" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point46"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point47" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point47"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point48" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point48"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "48"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point49" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point49"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "49"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("2_yvmkl")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.921569, 0.337255, 0.294118, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_yjr8v")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiceButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+offset_bottom = -50.0
+text = "掷骰子"
+
+[node name="DiceResult" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -100.0
+text = "点数: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node2D" parent="."]
+script = ExtResource("3_lfcxm")
+
+[connection signal="pressed" from="UI/DiceButton" to="Dice" method="_on_dice_button_pressed"]
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point13" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point13"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point14" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point14"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point15" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point15"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point16" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point16"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point17" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point17"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point18" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point18"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point19" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point19"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point20" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point20"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point21" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point21"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point22" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point22"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point23" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point23"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point24" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point24"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point25" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point25"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point26" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point26"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point27" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point27"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point28" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point28"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point29" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point29"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point30" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point30"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point31" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point31"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point32" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point32"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point33" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point33"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point34" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point34"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point35" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point35"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point36" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point36"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point37" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point37"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point38" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point38"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point39" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point39"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point40" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point40"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point41" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point41"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "41"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point42" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point42"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point43" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point43"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point44" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point44"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point45" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point45"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point46" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point46"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point47" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point47"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point48" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point48"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "48"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point49" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point49"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "49"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("2_yvmkl")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.921569, 0.337255, 0.294118, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_yjr8v")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiceButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+offset_bottom = -50.0
+text = "掷骰子"
+
+[node name="DiceResult" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -100.0
+text = "点数: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node2D" parent="."]
+script = ExtResource("3_lfcxm")
+
+[connection signal="pressed" from="UI/DiceButton" to="Dice" method="_on_dice_button_pressed"]
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point13" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point13"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point14" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point14"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point15" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point15"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point16" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point16"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "16"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point17" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point17"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point18" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point18"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "18"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point19" type="Marker2D" parent="PathPoints"]
+position = Vector2(1300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point19"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point20" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point20"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point21" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point21"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point22" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point22"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "22"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point23" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point23"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point24" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point24"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point25" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point25"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point26" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point26"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "26"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point27" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point27"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "27"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point28" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point28"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "28"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point29" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point29"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "29"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point30" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point30"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point31" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 700)
+
+[node name="Label" type="Label" parent="PathPoints/Point31"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "31"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point32" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 600)
+
+[node name="Label" type="Label" parent="PathPoints/Point32"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "32"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point33" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 500)
+
+[node name="Label" type="Label" parent="PathPoints/Point33"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point34" type="Marker2D" parent="PathPoints"]
+position = Vector2(100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point34"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "34"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point35" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point35"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "35"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point36" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point36"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "36"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point37" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point37"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point38" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point38"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "38"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point39" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point39"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "39"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point40" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point40"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point41" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point41"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "41"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point42" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point42"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "42"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point43" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point43"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "43"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point44" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 400)
+
+[node name="Label" type="Label" parent="PathPoints/Point44"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "44"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point45" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 300)
+
+[node name="Label" type="Label" parent="PathPoints/Point45"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "45"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point46" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point46"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "46"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point47" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point47"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point48" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point48"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "48"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point49" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 200)
+
+[node name="Label" type="Label" parent="PathPoints/Point49"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "49"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("2_yvmkl")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.921569, 0.337255, 0.294118, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_yjr8v")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DiceButton" type="Button" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = -50.0
+offset_bottom = -50.0
+text = "掷骰子"
+
+[node name="DiceResult" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -150.0
+offset_right = -50.0
+offset_bottom = -100.0
+text = "点数: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dice" type="Node2D" parent="."]
+script = ExtResource("3_lfcxm")
+
+[connection signal="pressed" from="UI/DiceButton" to="Dice" method="_on_dice_button_pressed"]
+[node name="Label" type="Label" parent="PathPoints/Point1"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "起点"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point2" type="Marker2D" parent="PathPoints"]
+position = Vector2(200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point3" type="Marker2D" parent="PathPoints"]
+position = Vector2(300, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point3"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point4" type="Marker2D" parent="PathPoints"]
+position = Vector2(400, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point4"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point5" type="Marker2D" parent="PathPoints"]
+position = Vector2(500, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point5"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point6" type="Marker2D" parent="PathPoints"]
+position = Vector2(600, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point6"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point7" type="Marker2D" parent="PathPoints"]
+position = Vector2(700, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point7"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point8" type="Marker2D" parent="PathPoints"]
+position = Vector2(800, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point8"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point9" type="Marker2D" parent="PathPoints"]
+position = Vector2(900, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point9"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point10" type="Marker2D" parent="PathPoints"]
+position = Vector2(1000, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point10"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point11" type="Marker2D" parent="PathPoints"]
+position = Vector2(1100, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point11"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Point12" type="Marker2D" parent="PathPoints"]
+position = Vector2(1200, 100)
+
+[node name="Label" type="Label" parent="PathPoints/Point12"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "12"
